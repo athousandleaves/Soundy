@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="content">
+      <div class="ui top attached">
+        <div class="item">
+           <div class="ui centered embed">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=song.songURL%>" frameborder="0" allowfullscreen></iframe>
+           </div>
+           <div class="content">
+              <div class="description">
+              "<%= song.title %>" by <%= song.artist %>
+              </div>
+              <div class="extra">
+              <span>Posted <%= song.created.toDateString() %></span>
+              </div>
+              <div class="meta">
+                <a class="ui mini button" id="editbutton" href="/songs/<%=song._id %>/edit">
+                    Edit
+                </a>
+                <form action="/songs/<%=song._id%>?_method=DELETE" method="POST" id="delete">
+                  <button class="ui mini button" id="buttoncolor">Delete</button>
+                </form>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+</div>
+                
+<% include ./partials/footer %>

@@ -1,0 +1,45 @@
+/*
+COLOR SCHEME
+#286DA8 summer sky
+#CD5360 peach
+#B37D4E field
+#438496 breeze
+
+*/
+
+#soundicon {
+    font-size: 2.5em;
+    color: #CD5360;
+}
+
+.container.main {
+    margin-top: 7em;
+    margin-bottom: 5em;
+}
+
+#buttoncolor {
+    background-color: #CD5360;
+    color: white;
+}
+
+.description {
+ font-size: 1.1em;
+}
+
+#editbutton {
+    background-color: #286DA8;
+    color: white;
+}
+
+i.volume {
+     font-size: 0.9em;
+     color: #286DA8;
+}
+
+.listen {
+    color: #CD5360;
+}
+
+#delete {
+    display:inline;
+}

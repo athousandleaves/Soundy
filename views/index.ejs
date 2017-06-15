@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<div class="ui main container">
+  <div class="ui link centered cards raised">
+    <% songs.forEach(function(song){ %>
+      <div class="ui card">
+         <a href="/songs/<%= song._id %>">
+           <div class="image">
+             <img class="ui fluid bordered image" src="<%= song.image %>">
+           </div>
+         </a>
+        <div class="content centered">
+          <div class="ui description">
+            "<%= song.title %>"
+          </div> 
+          <div class="ui">
+             by <strong><%= song.artist %></strong>
+          </div>
+          <a class="right floated" href="/songs/<%= song._id %>">
+            <span class="listen">Listen</span> 
+            <i class="volume up icon"></i>
+          </a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<% include ./partials/footer %>
